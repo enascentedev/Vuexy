@@ -1,9 +1,14 @@
 <template>
-	<header class="flex justify-between items-center p-5 text-lg">
-		<h1>Dashboard User</h1>
-		<i class="fa-solid fa-bars"></i>
-	</header>
+  <header class="flex justify-between items-center p-5 text-lg shadow-2xl">
+    <i class="fas fa-search"></i>
+    <div class="flex items-center gap-5">
+      <i class="fas fa-user"></i>
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </header>
 </template>
+
 
 <script>
 export default {
