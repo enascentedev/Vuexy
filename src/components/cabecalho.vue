@@ -2,9 +2,11 @@
   <header id="header">
     <i class="fas fa-search"></i>
     <div>
-      <i class="fas fa-user"></i>
-      <i class="fas fa-bell"></i>
-      <i class="fas fa-user-circle"></i>
+      <font-awesome-icon :icon="['fas', 'user']" />
+      <font-awesome-icon :icon="['fas', 'bell']" />
+      <font-awesome-icon :icon="['fas', 'circle-user']" />
+			<font-awesome-icon icon="fa-solid fa-user-secret"/>
+
     </div>
   </header>
 </template>
