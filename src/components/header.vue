@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "Cabecalho",
+  name: "Header",
 };
 </script>
 

@@ -1,33 +1,29 @@
 <script setup>
-import Cabecalho from "../components/cabecalho.vue";
-import Count from "../components/count.vue";
-import Table from "../components/table.vue";
-import Navegation from "../components/navegation.vue";
-import Footer from "../components/footer.vue";
+import Header from "@/components/header.vue";
+import Dashboard from "@/components/dashboard.vue";
+import Navegation from "@/components/navegation.vue";
+import Footer from "@/components/footer.vue";
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen"> <!-- Altere para flex-col e min-h-screen -->
+  <div class="h-full flex flex-col "> <!-- Altere para flex-col e min-h-screen -->
     <div class="flex flex-1"> <!-- Adicione um div envolvendo aside e main -->
       <aside class="w-1/5">
         <navegation />
       </aside>
       <main class="w-4/5 flex flex-col">
         <section class="h-20">
-          <cabecalho />
+          <Header/>
         </section>
-        <section class="h-40">
-          <count />
+        <section class="px-10 bg-gray-100">
+          <Dashboard />
         </section>
-        <section class="flex-1">
-          <Table/>
-        </section>
-				<Footer/>
+			
       </main>
     </div>
-    <footer class="w-full h-40">
-     
-    </footer>
   </div>
+	<footer class="w-ful bg-gray-400">
+		<Footer/>
+	</footer>
 </template>
 

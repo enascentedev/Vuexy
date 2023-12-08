@@ -1,24 +1,40 @@
 <template>
-	<div class="h-full flex flex-col gap-10 items-center py-12">
-		<address class="flex flex-col items-center gap-1 p-5 not-italic">
-			<i class="fas fa-user-circle p-2 text-6xl"></i>
-			<p>Emanuel</p>
-			<p>Email: <a href="mailto:contato@exemplo.com">manequinha@.com</a></p>
-		</address>
-		<nav class="flex flex-col gap-10 text-base">
-			<a href="#"><i class="fas fa-house pr-2"></i>home </a>
-			<a href="#"><i class="fas fa-file pr-2"></i>File </a>
-			<a href="#"><i class="fas fa-message pr-2"></i>Message </a>
-			<a href="#"><i class="fas fa-bell pr-2"></i>Notification</a>
-			<a href="#"><i class="fas fa-location pr-2"></i>Location</a>
-			<a href="#"><i class="fas fa-chart-pie pr-2"></i>Graph</a>
-			
-		</nav>
+	<div class="h-full flex flex-col gap-3 items-center p-5">
+		<div class="w-full flex justify-between items-center p-1">
+			<img src="../assets/logo.png"  />
+			<font-awesome-icon :icon="['fas', 'circle-dot']" class="flex justify-end" />
+		</div>
+		<div class="dropdown flex w-full">
+			<button class="flex justify-between items-center w-full text-gray-700 p-2">
+				<span class="flex-flex-1">
+					<font-awesome-icon :icon="['fas', 'toggle-off']"/>
+					Form Elements
+				</span>
+				<font-awesome-icon :icon="['fas', 'caret-right']"/>
+			</button>
+			<ul class="pt-2 shadow menu dropdown-content bg-base-100 rounded-box w-full">
+				<li><a>Item 1</a></li>
+				<li><a>Item 2</a></li>
+			</ul>
+		</div>
+		<div class="dropdown flex w-full">
+			<button class="flex justify-between items-center w-full text-gray-700 p-2">
+				<span class="flex-flex-1">
+					<font-awesome-icon :icon="['fas', 'toggle-off']"/>
+					Form Elements
+				</span>
+				<font-awesome-icon :icon="['fas', 'caret-right']"/>
+			</button>
+			<ul class="pt-20 shadow menu dropdown-content bg-base-100 rounded-box w-full">
+				<li><a>Item 1</a></li>
+				<li><a>Item 2</a></li>
+			</ul>
+		</div>
 	</div>
 </template>
 
 <script>
 export default {
-	name: "Navegation",
+	name: "Navigation",
 };
 </script>
