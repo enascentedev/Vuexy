@@ -5,7 +5,6 @@
       <font-awesome-icon :icon="['fas', 'user']" />
       <font-awesome-icon :icon="['fas', 'bell']" />
       <font-awesome-icon :icon="['fas', 'circle-user']" />
-			<font-awesome-icon icon="fa-solid fa-user-secret"/>
 
     </div>
   </header>
@@ -19,15 +18,15 @@ export default {
 
 <style lang="postcss" scoped>
 #header {
-  @apply flex justify-between items-center p-5 text-lg shadow-2xl
+  @apply flex justify-between items-center py-8 text-lg rounded-lg bg-white;
 }
 
 #header > i.fas.fa-search {
- 
+ @apply pl-5
 }
 
 #header > div {
-  @apply flex items-center gap-5;
+  @apply flex items-center gap-5 pr-5;
 }
 
 #header > div > .fas {

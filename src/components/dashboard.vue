@@ -1,7 +1,7 @@
 <template>
-	<div class="w-full flex flex-col gap-5" >
-		<div class="w-full grid grid-cols-4 gap-5 ">
-			<!-- primeira linha  -->
+	<div id="dashboard">
+		<!-- primeira linha -->
+		<section class="row-um">
 			<section class="col-span-2 bg-blue-500 h-64 py-10 px-5 rounded-lg">
 				<div class="flex text-amber-50">
 					<div class="w-2/3">
@@ -24,28 +24,34 @@
 						</div>
 
 					</div>
-					<div class="w-1/3 h-full mt-10 mr-10">
+					<div class="w-1/3 h-full mr-10">
 						<img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/img/illustrations/card-website-analytics-1.png" alt="Descrição da Imagem"/>
 				</div>
 
 				</div>
 
 			</section>
-			<span class="col-span-1 bg-red-600 h-64  rounded-lg"></span>
-			<span class="col-span-1 bg-amber-400 h-64 rounded-lg"></span>
-		</div>
+			<div class="col-span-1 p-5 bg-white h-64  rounded-lg ">
+				<chartPie/>
+			</div>
+			<div class="col-span-1 p-5 bg-white h-64 rounded-lg">
+				<chartRadial/>
+			</div>
+		</section>
 
 		<!-- segunda linha -->
-		<section class="w-full grid grid-cols-3 gap-5">
+		<section class="row-dois">
 			<span class="h-96 col-span-1 py-10 px-5 rounded-lg bg-white">
-				<div class="flex items-center gap-20 p-2">
-						<div>
-							<h3>Sales by Countries</h3>
-							<p class="text-xs">Monthly Sales Overview</p>
+				<div class="flex items-center justify-around">
+						<div class="flex flex-1">
+							<div class="flex flex-col">
+								<h3>Sales by Countries</h3>
+								<p class="text-xs">Monthly Sales Overview</p>
 						</div>
-						<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  class="flex flex-1"/>
+						</div>
+						<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  />
 				</div>
-				<div class="flex items-center  p-2">
+				<div class="flex items-center">
 					<font-awesome-icon :icon="['fas', 'flag-usa']" class="p-3 rounded-full  bg-yellow-400" />
 					<div class="flex flex-1 p-2">
 						<div class="flex flex-col">
@@ -55,65 +61,18 @@
 					</div>
 
 					
-					<div class="flex gap-2 items-center ">
+					<div class="flex justify-end items-center gap-2">
 						<font-awesome-icon :icon="['fas', 'caret-up']" />
 						<span class="font-semibold">25.8%</span>
-					</div>
-
-				</div>
-				<div class="flex items-center gap-20 p-2">
-						<div>
-							<h3>Sales by Countries</h3>
-							<p class="text-xs">Monthly Sales Overview</p>
-						</div>
-						<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  class="flex flex-1"/>
-				</div>
-				<div class="flex items-center  p-2">
-					<font-awesome-icon :icon="['fas', 'flag-usa']" class="p-3 rounded-full  bg-yellow-400" />
-					<div class="flex flex-1 p-2">
-						<div class="flex flex-col">
-							<span class="font-semibold text-lg">$8,567k</span>
-							<span class="text-sm text-gray-600">United States</span>
-						</div>
-					</div>
-
-					
-					<div class="flex gap-2 items-center ">
-						<font-awesome-icon :icon="['fas', 'caret-up']" />
-						<span class="font-semibold">25.8%</span>
-					</div>
-
-				</div>
-
-			</span>
-			<span class="h-64 col-span-1 py-10 px-5 rounded-lg bg-white">
-				<div class="flex items-center gap-20 p-2">
-						<div>
-							<h3>Source Visits</h3>
-							<p class="text-xs">38.4k Visitors</p>
-						</div>
-						<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  class="flex flex-1"/>
-				</div>
-				<div class="flex items-center  p-2">
-					<font-awesome-icon :icon="['fas', 'flag-usa']" class="p-3 rounded-md bg-yellow-400" />
-					<div class="flex flex-1 p-2">
-						<div class="flex flex-col">
-							<h3 class="font-semibold text-base">Direct Source</h3>
-							<span class="text-sm text-gray-600">Direct link click</span>
-						</div>
-					</div>
-
-					
-					<div class="flex gap-2 items-center ">
-						
-						<span class="font-semibold">25.8k</span>
 						<span class="px-2 py-1 rounded-lg bg-blue-600">+3.1k</span>
-
 					</div>
 
 				</div>
-
 			</span>
+			<div class="h-64 p-5 col-span-1  rounded-lg bg-white">
+				<chartBarra/>
+
+			</div>
 
 			<span class="h-64 col-span-1 rounded-lg bg-white">
 				<div class="h-full flex items-center justify-center">
@@ -125,7 +84,7 @@
 		</section>
 
 <!-- terceira linha -->
-		<section class="w-full grid grid-cols-3 gap-5 ">
+		<section class="row-tres">
 			<span class="h-96 col-span-1 py-10 px-5 rounded-lg bg-white">
 				<div class="flex items-center gap-20 p-2">
 						<div>
@@ -134,7 +93,7 @@
 						</div>
 						<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  class="flex flex-1"/>
 				</div>
-				<div class="flex items-center  p-2">
+				<div class="flex items-center">
 					<font-awesome-icon :icon="['fas', 'flag-usa']" class="p-3 rounded-md bg-yellow-400" />
 					<div class="flex flex-1 p-2">
 						<div class="flex flex-col">
@@ -160,7 +119,7 @@
 					<div class="container mx-auto p-6">
 						<!-- Título e Barra de Pesquisa -->
 						<div class="flex justify-between items-center mb-6">
-							<h1 class="text-xl font-semibold">Projects</h1>
+							<h1 class="text-xl font-semibold">Projetos</h1>
 							<input type="text" placeholder="Search:" class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none">
 						</div>
 						
@@ -182,7 +141,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<!-- Linhas da Tabela -->
+									
 									<tr class="border-b bg-gray-50">
 										<td class="w-4 p-4">
 											<div class="flex items-center">
@@ -190,22 +149,22 @@
 											</div>
 										</td>
 										<td class="px-6 py-4">
-											<!-- Seu conteúdo aqui -->
+											
 										</td>
 										<td class="px-6 py-4">
-											<!-- Seu conteúdo aqui -->
+											
 										</td>
 										<td class="px-6 py-4">
-											<!-- Seu conteúdo aqui -->
+											
 										</td>
 										<td class="px-6 py-4">
-											<!-- Seu conteúdo aqui -->
+											
 										</td>
 										<td class="px-6 py-4">
-											<!-- Seu conteúdo aqui -->
+											
 										</td>
 									</tr>
-									<!-- Repita para outras linhas -->
+							
 								</tbody>
 							</table>
 						</div>
@@ -221,7 +180,39 @@
 </template>
 
 <script>
+import chartPie from "@/components/graficos/chartPie.vue";
+import chartRadial from "@/components/graficos/chartRadial.vue";
+import chartBarra from "@/components/graficos/chartBarra.vue";
+
 export default {
-	name: "Count",
+	name: "Dashboard",
+	components: {
+		chartPie,
+		chartRadial,
+		chartBarra,
+	},
 };
 </script>
+<style lang="postcss" scoped>
+#dashboard {
+  @apply w-full flex flex-col gap-5;
+ .row-um{
+  @apply w-full grid grid-cols-4 gap-5;
+}
+.row-dois{
+  @apply w-full grid grid-cols-3 gap-5;
+}
+}
+
+#dashboard> i.fas.fa-search {
+ @apply pl-5
+}
+
+.row-tres{
+  @apply w-full grid grid-cols-3 gap-5 ;
+}
+
+#header > div > .fas {
+  
+}
+</style>

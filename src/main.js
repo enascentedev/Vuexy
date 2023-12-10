@@ -3,6 +3,8 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import VueApexCharts from 'vue3-apexcharts'
+
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -22,6 +24,8 @@ library.add(fas, far, fab);
 const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
+
+app.component('apexchart', VueApexCharts)
 
 
 app.use(router)

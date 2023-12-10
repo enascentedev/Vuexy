@@ -11,11 +11,11 @@ import Footer from "@/components/footer.vue";
       <aside class="w-1/5">
         <navegation />
       </aside>
-      <main class="w-4/5 flex flex-col">
-        <section class="h-20">
+      <main class="w-4/5 flex flex-col bg-gray-100">
+        <section class="h-20 mx-10 my-5">
           <Header/>
         </section>
-        <section class="px-10 bg-gray-100">
+        <section class="px-10">
           <Dashboard />
         </section>
 			
