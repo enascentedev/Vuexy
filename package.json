@@ -15,9 +15,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "@tailwindcss/forms": "^0.5.7",
+    "apexcharts": "^3.44.2",
     "daisyui": "^4.4.14",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "vue-apexcharts": "^1.6.2",
+    "vue-router": "^4.2.5",
+    "vue3-apexcharts": "^1.4.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.4.0",
