@@ -2,46 +2,35 @@
 	<div id="dashboard">
 		<!-- primeira linha -->
 		<section class="row-um">
-			<section class="col-span-2 bg-blue-500 h-64 py-10 px-5 rounded-lg">
-				<div class="flex text-amber-50">
-					<div class="w-2/3">
-						<div class="flex flex-col font-semibold ">
-							<h3>Website Analytics</h3>
-							<p>Total 28.5%</p>
-							<h3 class="mt-5">Traffic</h3>
-						</div>
-						<div class="flex items-center gap-1 mt-5 ">
-							<span class="px-2 py-1 rounded-lg bg-blue-900">28%</span>
-							<p>Sessions</p>
-							<span class="px-2 py-1 rounded-lg bg-blue-900">3.1k</span>
-							<p>Page Views</p>
-						</div>
-						<div class="flex items-center gap-3 mt-5">
-							<span>28%</span>
+			<section>
+				<div class="view">
+					<div>
+						<h3>Website Analytics</h3>
+						<p>Total 28.5%</p>
+						<h3>Traffic</h3>
+					<div class="percent ">
+							<span >28%</span>
 							<p>Sessions</p>
 							<span>3.1k</span>
 							<p>Page Views</p>
 						</div>
-
+						
 					</div>
-					<div class="w-1/3 h-full mr-10">
-						<img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/img/illustrations/card-website-analytics-1.png" alt="Descrição da Imagem"/>
-				</div>
-
+						<img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/img/illustrations/card-website-analytics-1.png" alt="Descrição da Imagem" class="@apply w-1/3 h-full flex flex-1 mr-10"/>
 				</div>
 
 			</section>
-			<div class="col-span-1 p-5 bg-white h-64  rounded-lg ">
+			<div class="col-two ">
 				<chartPie/>
 			</div>
-			<div class="col-span-1 p-5 bg-white h-64 rounded-lg">
+			<div class="col-three">
 				<chartRadial/>
 			</div>
 		</section>
 
 		<!-- segunda linha -->
 		<section class="row-dois">
-			<span class="h-96 col-span-1 py-10 px-5 rounded-lg bg-white">
+			<section>
 				<div class="flex items-center justify-around">
 						<div class="flex flex-1">
 							<div class="flex flex-col">
@@ -68,7 +57,7 @@
 					</div>
 
 				</div>
-			</span>
+			</section>
 			<div class="h-64 p-5 col-span-1  rounded-lg bg-white">
 				<chartBarra/>
 
@@ -76,9 +65,7 @@
 
 			<span class="h-64 col-span-1 rounded-lg bg-white">
 				<div class="h-full flex items-center justify-center">
-					<p class="text-center">
-						Developer
-					</p>
+					<chartMap/>
 				</div>
 			</span>
 		</section>
@@ -183,6 +170,7 @@
 import chartPie from "@/components/graficos/chartPie.vue";
 import chartRadial from "@/components/graficos/chartRadial.vue";
 import chartBarra from "@/components/graficos/chartBarra.vue";
+import chartMap from "@/components/graficos/chartMap.vue";
 
 export default {
 	name: "Dashboard",
@@ -190,6 +178,7 @@ export default {
 		chartPie,
 		chartRadial,
 		chartBarra,
+		chartMap,
 	},
 };
 </script>
@@ -198,12 +187,39 @@ export default {
   @apply w-full flex flex-col gap-5;
  .row-um{
   @apply w-full grid grid-cols-4 gap-5;
+	.col-two,.col-three{
+	@apply h-64 col-span-1 p-5 rounded-lg bg-white;  
+}
 }
 .row-dois{
   @apply w-full grid grid-cols-3 gap-5;
+.row-dois section{
+	@apply h-96 col-span-1 py-10 px-5 rounded-lg bg-white;
 }
 }
+}
+.row-um section{
+		@apply col-span-2 h-64 py-10 px-5 rounded-lg bg-blue-500;
+		.view{
+			@apply flex text-amber-50;
+			.view div {
+				@apply flex flex-col font-semibold;
+			}
+		.percent{
+			@apply flex items-center gap-1 mt-5;
+			.percent span{
+				@apply  px-2 py-1 rounded-lg bg-blue-900;
+			}
+			 h3{
+					@apply mt-3;
 
+				}
+		}
+		}
+		img{
+			@apply w-1/3 h-full flex flex-1 mr-10; 
+		}
+	}
 #dashboard> i.fas.fa-search {
  @apply pl-5
 }
