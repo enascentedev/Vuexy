@@ -1,4 +1,5 @@
 <template>
+	<!-- tirar legendas -->
   <div>
     <apexchart type="area" width="180" height="220" :options="chartOptions" :series="series"></apexchart>
   </div>
@@ -10,19 +11,23 @@ export default {
   data() {
     return {
       chartOptions: {
-        chart: {
-          height: 'auto'
-        },
+
+				//eixo x
         xaxis: {
           type: 'category',
           categories: ['Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
         },
+
+				//acentuamento da curva opções: stepline, smooth,straight
         stroke: {
           curve: 'smooth'
         },
+				//mostra legenda no gráfico
         dataLabels: {
           enabled: false
         },
+
+				//opacidade das cores
         fill: {
           type: 'gradient',
           gradient: {
@@ -33,6 +38,8 @@ export default {
           }
         }
       },
+
+			//eixo y
       series: [{
         name: 'series1',
         data: [31, 40, 28, 51, 42, 109, 100]

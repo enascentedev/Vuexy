@@ -1,4 +1,5 @@
 <template>
+	<!-- atentar as nomenclaturas portugues e ingles misturado -->
 	<div id="dashboard">
 		<!-- primeira linha -->
 		<section class="row-um">
@@ -188,7 +189,7 @@ export default {
  .row-um{
   @apply w-full grid grid-cols-4 gap-5;
 	.col-two,.col-three{
-	@apply h-64 col-span-1 p-5 rounded-lg bg-white;  
+	@apply h-64  p-5 rounded-lg bg-white;  
 }
 }
 .row-dois{

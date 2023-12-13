@@ -1,5 +1,7 @@
 <template>
+	<!-- mudar nomenclatura para sidebar -->
 	<div id="main">
+		<!-- mudar para h1 -->
 		<div>
 			<img src="../assets/logo.png"  />
 			<font-awesome-icon :icon="['fas', 'circle-dot']" class="i" />

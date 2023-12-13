@@ -11,7 +11,6 @@ export default {
     return {
       chartOptions: {
         chart: {
-          height: 350,
           type: 'heatmap',
         },
         dataLabels: {

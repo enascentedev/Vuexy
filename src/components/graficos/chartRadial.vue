@@ -1,11 +1,7 @@
 <template>
   <div>
     <apexchart
-      type="radialBar"
-      width="180" height="220"
-      :options="chartOptions"
-      :series="series"
-    ></apexchart>
+      type="radialBar"      width="180" height="220"      :options="chartOptions"      :series="series" ></apexchart>
   </div>
 </template>
 
@@ -22,7 +18,6 @@ export default {
       series: [85],
       chartOptions: {
         chart: {
-          height: 350,
           type: 'radialBar',
         },
         plotOptions: {
@@ -30,6 +25,8 @@ export default {
             hollow: {
               size: '70%',
             },
+
+						//como dados serão exibidos
             dataLabels: {
               showOn: 'always',
               name: {
@@ -50,7 +47,8 @@ export default {
           }
         },
         labels: ['Tarefas completas'],
-       
+
+       //options legenda
         legend: {
           show: true,
           floating: true,

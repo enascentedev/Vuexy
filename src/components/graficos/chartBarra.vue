@@ -9,20 +9,23 @@
 import VueApexCharts from 'vue3-apexcharts';
 
 export default {
-  name: 'EarningsChart',
+  name: 'ChartBarra',
   components: {
     apexchart: VueApexCharts,
   },
   data() {
     return {
+			// Dados para o gráfico
       series: [{
         data: [44, 55, 41, 64, 22, 43, 21]
       }],
+
+			// Opções de configuração do gráfico
       chartOptions: {
         chart: {
           type: 'bar',
-          height: 350
         },
+
         plotOptions: {
           bar: {
             borderRadius: 4,
@@ -32,6 +35,8 @@ export default {
         dataLabels: {
           enabled: false
         },
+
+				//config eixo x
         xaxis: {
           categories: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab', 'Dom'],
         },
@@ -40,7 +45,7 @@ export default {
           colors: ['#8E54E9', '#2b908f']
         },
         legend: {
-          show: true, 
+          show: false, 
         },
         
       },
@@ -48,14 +53,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.legenda {
-  @apply flex flex-col;
-}
-
-.legenda-item {
-  @apply flex items-center my-2;
-}
-
-</style>
