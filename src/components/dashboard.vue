@@ -17,7 +17,7 @@
 						</div>
 						
 					</div>
-						<img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/img/illustrations/card-website-analytics-1.png" alt="Descrição da Imagem" class="@apply w-1/3 h-full flex flex-1 mr-10"/>
+						<img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/img/illustrations/card-website-analytics-1.png" alt="Descrição da Imagem"/>
 				</div>
 
 			</section>
@@ -218,7 +218,7 @@ export default {
 		}
 		}
 		img{
-			@apply w-1/3 h-full flex flex-1 mr-10; 
+			@apply w-20 h-40 flex flex-1 mr-10; 
 		}
 	}
 #dashboard> i.fas.fa-search {
