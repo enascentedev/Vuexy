@@ -2,7 +2,7 @@
 	<!-- atentar as nomenclaturas portugues e ingles misturado -->
 	<div id="dashboard">
 		<!-- primeira linha -->
-		<section class="row-um">
+		<section class="row-one">
 			<section>
 				<div class="view">
 					<div>
@@ -30,85 +30,58 @@
 		</section>
 
 		<!-- segunda linha -->
-		<section class="row-dois">
+		<section class="row-two">
 			<section>
-				<div class="flex items-center justify-around">
-						<div class="flex flex-1">
-							<div class="flex flex-col">
+				<div>
+						<div class="title">
+							<div>
 								<h3>Sales by Countries</h3>
-								<p class="text-xs">Monthly Sales Overview</p>
+								<p >Monthly Sales Overview</p>
 						</div>
 						</div>
 						<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  />
 				</div>
-				<div class="flex items-center">
-					<font-awesome-icon :icon="['fas', 'flag-usa']" class="p-3 rounded-full  bg-yellow-400" />
-					<div class="flex flex-1 p-2">
-						<div class="flex flex-col">
-							<span class="font-semibold text-lg">$8,567k</span>
-							<span class="text-sm text-gray-600">United States</span>
+				<div class="country">
+					<font-awesome-icon :icon="['fas', 'flag-usa']" class="i"/>
+					<div class="price">
+						<div>
+							<span>$8,567k</span>
+							<p>United States</p>
 						</div>
 					</div>
 
 					
-					<div class="flex justify-end items-center gap-2">
+					<div class="percent">
 						<font-awesome-icon :icon="['fas', 'caret-up']" />
-						<span class="font-semibold">25.8%</span>
-						<span class="px-2 py-1 rounded-lg bg-blue-600">+3.1k</span>
+						<p>25.8%</p>
+						<span>+3.1k</span>
 					</div>
 
 				</div>
 			</section>
+
 			<div class="h-64 p-5 col-span-1  rounded-lg bg-white">
 				<chartBarra/>
-
 			</div>
 
-			<span class="h-64 col-span-1 rounded-lg bg-white">
-				<div class="h-full flex items-center justify-center">
-					<chartMap/>
-				</div>
-			</span>
+			<div class="h-64 col-span-1 rounded-lg bg-white">
+				<chartMap/>
+			</div>
+
 		</section>
 
 <!-- terceira linha -->
 		<section class="row-tres">
 			<span class="h-96 col-span-1 py-10 px-5 rounded-lg bg-white">
-				<div class="flex items-center gap-20 p-2">
-						<div>
-							<h3>Source Visits</h3>
-							<p class="text-xs">38.4k Visitors</p>
-						</div>
-						<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  class="flex flex-1"/>
-				</div>
-				<div class="flex items-center">
-					<font-awesome-icon :icon="['fas', 'flag-usa']" class="p-3 rounded-md bg-yellow-400" />
-					<div class="flex flex-1 p-2">
-						<div class="flex flex-col">
-							<h3 class="font-semibold text-base">Direct Source</h3>
-							<span class="text-sm text-gray-600">Direct link click</span>
-						</div>
-					</div>
-
-					
-					<div class="flex gap-2 items-center ">
-						
-						<span class="font-semibold">25.8k</span>
-						<span class="px-2 py-1 rounded-lg bg-blue-600">+3.1k</span>
-
-					</div>
-
-				</div>
-
 			</span>
 
-
-				<section class="h-64 col-span-2 rounded-lg bg-slate-200 ">
-					<div class="container mx-auto p-6">
+				<!-- tabela -->
+				<section class="h-64 col-span-2 rounded-lg bg-slate-500 ">
+					<div class=" mx-auto p-6">
 						<!-- Título e Barra de Pesquisa -->
 						<div class="flex justify-between items-center mb-6">
 							<h1 class="text-xl font-semibold">Projetos</h1>
-							<input type="text" placeholder="Search:" class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none">
+							<input type="text" placeholder="Pesquisar:" class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none">
 						</div>
 						
 						<!-- Tabela de Projetos -->
@@ -116,16 +89,16 @@
 							<table class="w-full text-sm text-left">
 								<thead class="text-xs text-gray-700 uppercase bg-gray-50">
 									<tr>
-										<th scope="col" class="p-4">
+										<th class="p-4">
 											<div class="flex items-center">
 												<input type="checkbox" class="form-checkbox">
 											</div>
 										</th>
-										<th scope="col" class="px-6 py-3">Name</th>
-										<th scope="col" class="px-6 py-3">Leader</th>
-										<th scope="col" class="px-6 py-3">Team</th>
-										<th scope="col" class="px-6 py-3">Status</th>
-										<th scope="col" class="px-6 py-3">Actions</th>
+										<th  class="px-6 py-3">Name</th>
+										<th  class="px-6 py-3">Leader</th>
+										<th  class="px-6 py-3">Team</th>
+										<th  class="px-6 py-3">Status</th>
+										<th  class="px-6 py-3">Actions</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -186,20 +159,57 @@ export default {
 <style lang="postcss" scoped>
 #dashboard {
   @apply w-full flex flex-col gap-5;
- .row-um{
+ .row-one{
   @apply w-full grid grid-cols-4 gap-5;
 	.col-two,.col-three{
 	@apply h-64  p-5 rounded-lg bg-white;  
 }
 }
-.row-dois{
+.row-two{
   @apply w-full grid grid-cols-3 gap-5;
-.row-dois section{
+}
+}
+.row-two section{
 	@apply h-96 col-span-1 py-10 px-5 rounded-lg bg-white;
+	.country {
+		@apply flex items-center;
+		.i{
+			@apply p-3 rounded-full  bg-yellow-400
+		}
+		.price{
+			@apply flex flex-1 p-2;
+			div{
+				@apply flex flex-col;
+				span{
+					@apply font-semibold text-lg;
+				}
+				p{
+					@apply text-sm text-gray-600;
+				}
+			}
+		}
+		.percent{
+			@apply flex items-center gap-2 font-semibold ;
+			span{
+				@apply px-2 py-1 rounded-lg bg-blue-600;
+			}
+		}
+	}
 }
-}
-}
-.row-um section{
+.row-two section div:first-child{
+		@apply flex items-center;
+		.title{
+			@apply flex flex-1;
+			div{
+				@apply flex flex-col;
+				p{
+					@apply text-xs;
+				}
+			}
+		}
+
+	}
+.row-one section{
 		@apply col-span-2 h-64 py-10 px-5 rounded-lg bg-blue-500;
 		.view{
 			@apply flex text-amber-50;

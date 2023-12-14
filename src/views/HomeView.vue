@@ -6,12 +6,12 @@ import Footer from "@/components/footer.vue";
 </script>
 
 <template>
-  <div class="h-full flex flex-col "> <!-- Altere para flex-col e min-h-screen -->
-    <div class="flex flex-1"> <!-- Adicione um div envolvendo aside e main -->
+  <div class="h-full flex flex-col "> 
+    <div class="flex flex-1"> 
       <aside class="w-1/5">
         <navegation />
       </aside>
-      <main class="w-4/5 flex flex-col bg-gray-100">
+      <main class="w-4/5 flex flex-col bg-gray-200">
         <section class="h-20 mx-10 my-5">
           <Header/>
         </section>
