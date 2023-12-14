@@ -18,16 +18,16 @@ export default {
           categories: ['Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
         },
 
-				//acentuamento da curva opções: stepline, smooth,straight
+				// stepline, smooth,straight
         stroke: {
           curve: 'smooth'
         },
-				//mostra legenda no gráfico
+				//legend
         dataLabels: {
           enabled: false
         },
 
-				//opacidade das cores
+				// opacity cors
         fill: {
           type: 'gradient',
           gradient: {

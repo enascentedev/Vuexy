@@ -73,6 +73,7 @@
 <!-- third line -->
 		<section class="row-tres">
 			<span class="h-96 col-span-1 py-10 px-5 rounded-lg bg-white">
+				<chartBrand/>
 			</span>
 
 				<!-- table -->
@@ -138,6 +139,7 @@ import chartPie from "@/components/graficos/chartPie.vue";
 import chartRadial from "@/components/graficos/chartRadial.vue";
 import chartBarra from "@/components/graficos/chartBarra.vue";
 import chartMap from "@/components/graficos/chartMap.vue";
+import chartBrand from "@/components/graficos/chartBrand.vue";
 
 export default {
 	name: "Dashboard",
@@ -146,6 +148,7 @@ export default {
 		chartRadial,
 		chartBarra,
 		chartMap,
+		chartBrand,
 	},
 };
 </script>

@@ -15,12 +15,11 @@ export default {
   },
   data() {
     return {
-			// Dados para o gráfico
+
       series: [{
         data: [44, 55, 41, 64, 22, 43, 21]
       }],
 
-			// Opções de configuração do gráfico
       chartOptions: {
         chart: {
           type: 'bar',

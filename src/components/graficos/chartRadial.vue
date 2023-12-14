@@ -26,7 +26,7 @@ export default {
               size: '70%',
             },
 
-						//como dados serão exibidos
+						//data show
             dataLabels: {
               showOn: 'always',
               name: {
@@ -48,7 +48,7 @@ export default {
         },
         labels: ['Tarefas completas'],
 
-       //options legenda
+       //options legend
         legend: {
           show: true,
           floating: true,
