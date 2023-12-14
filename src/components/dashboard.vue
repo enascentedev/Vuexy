@@ -1,7 +1,7 @@
 <template>
-	<!-- atentar as nomenclaturas portugues e ingles misturado -->
+	
 	<div id="dashboard">
-		<!-- primeira linha -->
+		<!-- first line -->
 		<section class="row-one">
 			<section>
 				<div class="view">
@@ -29,7 +29,7 @@
 			</div>
 		</section>
 
-		<!-- segunda linha -->
+		<!-- second line -->
 		<section class="row-two">
 			<section>
 				<div>
@@ -70,73 +70,66 @@
 
 		</section>
 
-<!-- terceira linha -->
+<!-- third line -->
 		<section class="row-tres">
 			<span class="h-96 col-span-1 py-10 px-5 rounded-lg bg-white">
 			</span>
 
-				<!-- tabela -->
+				<!-- table -->
 				<section class="h-64 col-span-2 rounded-lg bg-slate-500 ">
-					<div class=" mx-auto p-6">
-						<!-- Título e Barra de Pesquisa -->
-						<div class="flex justify-between items-center mb-6">
-							<h1 class="text-xl font-semibold">Projetos</h1>
-							<input type="text" placeholder="Pesquisar:" class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none">
-						</div>
-						
-						<!-- Tabela de Projetos -->
-						<div class="overflow-x-auto bg-white rounded-lg shadow">
-							<table class="w-full text-sm text-left">
-								<thead class="text-xs text-gray-700 uppercase bg-gray-50">
-									<tr>
-										<th class="p-4">
-											<div class="flex items-center">
-												<input type="checkbox" class="form-checkbox">
-											</div>
-										</th>
-										<th  class="px-6 py-3">Name</th>
-										<th  class="px-6 py-3">Leader</th>
-										<th  class="px-6 py-3">Team</th>
-										<th  class="px-6 py-3">Status</th>
-										<th  class="px-6 py-3">Actions</th>
-									</tr>
-								</thead>
-								<tbody>
-									
-									<tr class="border-b bg-gray-50">
-										<td class="w-4 p-4">
-											<div class="flex items-center">
-												<input type="checkbox" class="form-checkbox">
-											</div>
-										</td>
-										<td class="px-6 py-4">
-											
-										</td>
-										<td class="px-6 py-4">
-											
-										</td>
-										<td class="px-6 py-4">
-											
-										</td>
-										<td class="px-6 py-4">
-											
-										</td>
-										<td class="px-6 py-4">
-											
-										</td>
-									</tr>
-							
-								</tbody>
-							</table>
-						</div>
+		
+					<div class="title-table">
+						<h2>Projetos</h2>
+						<input type="text" placeholder="Pesquisar:" >
+					</div>
+				
+					<div id="content-table">
+						<table>
+							<thead>
+								<tr>
+									<th>
+										<div>
+											<input type="checkbox" class="form-checkbox">
+										</div>
+									</th>
+									<th>Name</th>
+									<th>Leader</th>
+									<th>Team</th>
+									<th>Status</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+								<tr>
+									<td >
+										<div>
+											<input type="checkbox" class="form-checkbox">
+										</div>
+									</td>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+					
+							</tbody>
+						</table>
 					</div>
 
 				</section>
 		</section>
-
-
-
-
 	</div>
 </template>
 
@@ -231,15 +224,41 @@ export default {
 			@apply w-20 h-40 flex flex-1 mr-10; 
 		}
 	}
-#dashboard> i.fas.fa-search {
- @apply pl-5
-}
-
+	.title-table{
+		@apply flex justify-between items-center p-5;
+		h2{
+			@apply text-xl font-semibold
+		}
+		input{
+			@apply h-10 px-5 border-2 border-gray-300 bg-white  rounded-lg text-sm 
+		}
+	}
+	#content-table{
+		@apply overflow-x-auto bg-white rounded-lg shadow m-5;
+		table{
+			thead{
+				@apply text-xs text-gray-700 uppercase;
+				th{
+					@apply px-6 py-3;
+					div{
+						@apply flex items-center;
+					}
+				}
+			}
+			tbody{
+				tr{
+					@apply border-b bg-gray-50;
+					td{
+						@apply px-6 py-4;
+						div{
+							@apply flex items-center
+						}
+					}
+				}
+			}
+		}
+	}
 .row-tres{
   @apply w-full grid grid-cols-3 gap-5 ;
-}
-
-#header > div > .fas {
-  
 }
 </style>
