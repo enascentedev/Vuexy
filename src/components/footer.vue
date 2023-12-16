@@ -21,7 +21,7 @@ export default {
 
 <style lang="postcss" scoped>
 #footer {
-	@apply flex justify-between p-5;
+	@apply flex justify-between p-5 bg-slate-400;
 }
 #footer > div:first-of-type {
 	@apply flex justify-start items-center gap-3;

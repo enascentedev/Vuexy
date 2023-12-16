@@ -1,11 +1,10 @@
 <template>
-	<!-- mudar nomenclatura para sidebar -->
 	<div id="main">
 		<!-- mudar para h1 -->
-		<div>
+		<h1>
 			<img src="../assets/logo.png"  />
 			<font-awesome-icon :icon="['fas', 'circle-dot']" class="i" />
-		</div>
+		</h1>
 		<nav class="dropdown">
 			<button>
 				<span>
@@ -15,8 +14,8 @@
 				<font-awesome-icon :icon="['fas', 'caret-right']"/>
 			</button>
 			<ul class="menu" >
-				<li><a>Item 1</a></li>
-				<li><a>Item 2</a></li>
+				<li><a>Opção 1</a></li>
+				<li><a>Opção 2</a></li>
 			</ul>
 		</nav>
 		<div class="dropdown">
@@ -28,8 +27,8 @@
 				<font-awesome-icon :icon="['fas', 'caret-right']"/>
 			</button>
 			<ul class="menu">
-				<li><a>Item 1</a></li>
-				<li><a>Item 2</a></li>
+				<li><a>Opção 3</a></li>
+				<li><a>Opção 4</a></li>
 			</ul>
 		</div>
 	</div>
@@ -37,7 +36,7 @@
 
 <script>
 export default {
-	name: "Navigation",
+	name: "Sidebar",
 };
 </script>
 <style lang="postcss" scoped>
@@ -47,7 +46,7 @@ export default {
 	@apply flex justify-end
 	}
 	.dropdown {
-  @apply w-full;
+  @apply w-full h-20;
 
 }
 	.dropdown button{
@@ -58,7 +57,7 @@ export default {
 }
 
 }
-#main > div:first-of-type {
+#main > h1:first-of-type {
 	@apply w-full flex justify-between items-center p-1;
 }
 
@@ -69,6 +68,6 @@ export default {
 	@apply text-sm;
 }
 ul {
-	@apply pt-20 shadow menu dropdown-content bg-base-100 rounded-box w-full;
+	@apply shadow menu dropdown-content bg-base-100 rounded-box w-full z-50;
 }
 </style>

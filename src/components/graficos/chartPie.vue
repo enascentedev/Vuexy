@@ -1,7 +1,7 @@
 <template>
 	<!-- tirar legendas -->
   <div>
-    <apexchart type="area" width="180" height="220" :options="chartOptions" :series="series"></apexchart>
+    <apexchart type="area" width="230" height="220" :options="chartOptions" :series="series"></apexchart>
   </div>
 </template>
 

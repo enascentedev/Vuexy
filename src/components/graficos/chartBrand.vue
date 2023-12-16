@@ -1,6 +1,6 @@
 <template>
   <div>
-    <apexchart type="donut" width="300" :options="chartOptions" :series="series"></apexchart>
+    <apexchart type="donut" width="340" height="220" :options="chartOptions" :series="series"></apexchart>
   </div>
 </template>
 
@@ -14,26 +14,24 @@ export default {
   },
   data() {
     return {
-      // Dados da série agora são apenas um array de números
-      series: [44, 55, 13, 33, 22, 44, 67],
 
-      // Opções de configuração do gráfico de rosca
+      series: [44, 55, 13, 33, 22, 44],
+
       chartOptions: {
         chart: {
           width: 380,
           type: 'donut',
         },
-        labels: ['Series 1', 'Series 2', 'Series 3', 'Series 4', 'Series 5', 'Series 6', 'Series 7'], // Pode adicionar labels correspondentes aqui
+        labels: ['Loja 1', 'Loja 2', 'Loja 3', 'Loja 4', 'Loja 5', 'Loja 6'], 
         dataLabels: {
-          enabled: false
+          enabled: true
         },
         legend: {
-          show: false // Isto remove as legendas
+          show: true
         },
         fill: {
           type: 'gradient',
           gradient: {
-            // Configurações de gradiente podem ser ajustadas conforme necessário
             shadeIntensity: 1,
             opacityFrom: 0.7,
             opacityTo: 0.9,
@@ -47,7 +45,8 @@ export default {
               width: 200
             },
             legend: {
-              show: false
+              show: true,
+							position: 'bottom',
             }
           }
         }],

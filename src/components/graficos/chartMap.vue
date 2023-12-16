@@ -1,62 +1,79 @@
 <template>
-
-    <apexchart type="heatmap" width="250" height="200"  :options="chartOptions" :series="series"></apexchart>
-  
+  <div>
+    <apexchart type="radialBar" width="350" height="250" :options="chartOptions" :series="series"></apexchart>
+  </div>
 </template>
 
 <script>
+import VueApexCharts from 'vue3-apexcharts';
+
 export default {
-	name: 'chartMap',
+  name: 'chartMap',
+  components: {
+    apexchart: VueApexCharts,
+  },
   data() {
     return {
+      series: [76, 67, 61, 90],
       chartOptions: {
         chart: {
-          type: 'heatmap',
+          height: 220,
+          type: 'radialBar',
         },
-        dataLabels: {
-          enabled: false
-        },
-        colors: ["#008FFB"],
-        xaxis: {
-          type: 'category',
-          categories: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta']
-        },
-        title: {
-          text: 'Atividades diárias'
-        },
-        grid: {
-          padding: {
-            right: 10
+        plotOptions: {
+          radialBar: {
+          
+            dataLabels: {
+              show: true, 
+              name: {
+                show: true,
+                fontSize: '16px',
+                fontFamily: undefined,
+                color: undefined,
+                offsetY: -10
+              },
+              value: {
+                show: true, 
+                fontSize: '14px',
+                fontFamily: undefined,
+                color: undefined,
+                offsetY: 5,
+                formatter: function (val) {
+                  return val; 
+                }
+              },
+              total: {
+                show: true,
+                label: 'Total',
+                formatter: function (w) {
+                  const sum = w.globals.seriesTotals.reduce((total, num) => {
+                    return total + num;
+                  }, 0);
+                  return sum;
+                }
+              }
+            }
           }
-        }
+        },
+        labels: ['Twiter', 'Messenger', 'Facebook', 'LinkedIn'],
+        colors: ['#45A1FF', '#2C7BE5', '#2E93fA', '#4E73DF'],
+        legend: {
+          show: false, 
+          position: 'bottom',
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 300
+            },
+            legend: {
+              position: 'bottom'
+            },
+          }
+        }],
       },
-      series: [
-        {
-          name: 'Acordar Cedo',
-          data: this.generateDayData()
-        },
-        {
-          name: 'Fazer Exercícios',
-          data: this.generateDayData()
-        },
-        {
-          name: 'Tomar Chimarrão',
-          data: this.generateDayData()
-        }
-      ]
-    }
+    };
   },
-  methods: {
-    generateDayData() {
-      let data = []
-      for (let i = 0; i < 5; i++) {
-        data.push({
-          x: `Dia ${i + 1}`,
-          y: Math.floor(Math.random() * 10)
-        })
-      }
-      return data
-    }
-  }
-}
+};
 </script>

@@ -1,5 +1,4 @@
 <template>
-	
 	<div id="dashboard">
 		<!-- first line -->
 		<section class="row-one">
@@ -72,64 +71,25 @@
 
 <!-- third line -->
 		<section class="row-tres">
-			<span class="h-96 col-span-1 py-10 px-5 rounded-lg bg-white">
+			<span class="h-64 col-span-1 py-10 px-5 rounded-lg bg-white">
 				<chartBrand/>
 			</span>
 
 				<!-- table -->
-				<section class="h-64 col-span-2 rounded-lg bg-slate-500 ">
-		
-					<div class="title-table">
-						<h2>Projetos</h2>
-						<input type="text" placeholder="Pesquisar:" >
-					</div>
-				
-					<div id="content-table">
-						<table>
-							<thead>
-								<tr>
-									<th>
-										<div>
-											<input type="checkbox" class="form-checkbox">
-										</div>
-									</th>
-									<th>Name</th>
-									<th>Leader</th>
-									<th>Team</th>
-									<th>Status</th>
-									<th>Actions</th>
-								</tr>
-							</thead>
-							<tbody>
-								
-								<tr>
-									<td >
-										<div>
-											<input type="checkbox" class="form-checkbox">
-										</div>
-									</td>
-									<td>
-										
-									</td>
-									<td>
-										
-									</td>
-									<td>
-										
-									</td>
-									<td>
-										
-									</td>
-									<td>
-										
-									</td>
-								</tr>
-					
-							</tbody>
-						</table>
-					</div>
+				<div class="h-64 col-span-2 rounded-lg bg-slate-500 ">
+				<Table/>
+				</div>
+		</section>
 
-				</section>
+		<section class="row-tres">
+			<span class="h-64 col-span-1 py-10 px-5 rounded-lg bg-white">
+				<Visits/>
+			</span>
+
+				<!-- table -->
+				<div class="h-64 col-span-2 rounded-lg bg-slate-500 ">
+				<Table/>
+				</div>
 		</section>
 	</div>
 </template>
@@ -140,6 +100,8 @@ import chartRadial from "@/components/graficos/chartRadial.vue";
 import chartBarra from "@/components/graficos/chartBarra.vue";
 import chartMap from "@/components/graficos/chartMap.vue";
 import chartBrand from "@/components/graficos/chartBrand.vue";
+import Visits from "@/components/source/visits.vue";
+import Table from "@/components/table.vue";
 
 export default {
 	name: "Dashboard",
@@ -149,6 +111,8 @@ export default {
 		chartBarra,
 		chartMap,
 		chartBrand,
+		Table,
+		Visits,
 	},
 };
 </script>
@@ -262,6 +226,6 @@ export default {
 		}
 	}
 .row-tres{
-  @apply w-full grid grid-cols-3 gap-5 ;
+  @apply w-full grid grid-cols-3 gap-5 mb-5;
 }
 </style>
