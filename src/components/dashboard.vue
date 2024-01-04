@@ -1,4 +1,5 @@
 <template>
+	<!-- componentizar os itens do dashboard -->
 	<div id="dashboard">
 		<!-- first line -->
 		<section class="row-one">
@@ -8,17 +9,15 @@
 						<h3>Website Analytics</h3>
 						<p>Total 28.5%</p>
 						<h3>Traffic</h3>
-					<div class="percent ">
+						<div class="percent ">
 							<span >28%</span>
 							<p>Sessions</p>
 							<span>3.1k</span>
 							<p>Page Views</p>
 						</div>
-						
 					</div>
 						<img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/img/illustrations/card-website-analytics-1.png" alt="Descrição da Imagem"/>
 				</div>
-
 			</section>
 			<div class="col-two ">
 				<chartPie/>
@@ -48,18 +47,15 @@
 							<p>United States</p>
 						</div>
 					</div>
-
-					
 					<div class="percent">
 						<font-awesome-icon :icon="['fas', 'caret-up']" />
 						<p>25.8%</p>
 						<span>+3.1k</span>
 					</div>
-
 				</div>
 			</section>
 
-			<div class="h-64 p-5 col-span-1  rounded-lg bg-white">
+			<div class="h-64 col-span-1  rounded-lg bg-white">
 				<chartBarra/>
 			</div>
 
@@ -71,12 +67,12 @@
 
 <!-- third line -->
 		<section class="row-tres">
-			<span class="h-64 col-span-1 py-10 px-5 rounded-lg bg-white">
+			<span class="h-64 col-span-1 rounded-lg bg-white">
 				<chartBrand/>
 			</span>
 
 				<!-- table -->
-				<div class="h-64 col-span-2 rounded-lg bg-slate-500 ">
+				<div class="h-64 col-span-2 rounded-lg bg-slate-500">
 				<Table/>
 				</div>
 		</section>
@@ -87,8 +83,8 @@
 			</span>
 
 				<!-- table -->
-				<div class="h-64 col-span-2 rounded-lg bg-slate-500 ">
-				<Table/>
+				<div class="h-64 col-span-2 rounded-lg bg-base-100 ">
+				
 				</div>
 		</section>
 	</div>

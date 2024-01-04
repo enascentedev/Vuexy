@@ -6,24 +6,24 @@ import Footer from "@/components/footer.vue";
 </script>
 
 <template>
-  <div class="h-full flex flex-col "> 
+  <div class="h-full flex flex-col">
     <div class="flex flex-1"> 
       <aside class="w-1/5">
         <Sidebar />
       </aside>
-      <main class="w-4/5 flex flex-col bg-gray-200">
-        <section class="h-20 mx-10 my-5">
+      <main class="h-full flex-grow w-4/5 flex flex-col bg-gray-200">
+        <section class="mx-10 my-5">
           <Header/>
         </section>
-        <section class="px-10">
+        <section class="px-10 ">
           <Dashboard />
         </section>
-			
       </main>
     </div>
+    <footer class="w-full h-20 bg-slate-400">
+      <Footer/>
+    </footer>
   </div>
-	<footer class="w-ful h-20 bg-slate-400">
-		<Footer/>
-	</footer>
 </template>
+
 
