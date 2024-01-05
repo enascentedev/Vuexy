@@ -7,8 +7,8 @@
 					<h3>Sales by Countries</h3>
 					<p >Monthly Sales Overview</p>
 				</div>
+				<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  />
 			</div>
-			<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  />
 		</div>
 		<div class="country">
 			<font-awesome-icon :icon="['fas', 'flag-usa']" class="i"/>
@@ -18,14 +18,11 @@
 					<p>United States</p>
 				</div>
 			</div>
-
-			
 			<div class="percent">
 				<font-awesome-icon :icon="['fas', 'caret-up']" />
 				<p>25.8%</p>
 				<span>+3.1k</span>
 			</div>
-
 		</div>
 	</section>
 </div>
@@ -42,7 +39,7 @@ export default {
 	 section{
 		@apply h-96 col-span-1 rounded-lg ;
 		.title{
-			@apply flex flex-1;
+			@apply flex justify-between items-center;
 			div{
 				@apply flex flex-col;
 				p{

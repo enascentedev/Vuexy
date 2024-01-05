@@ -29,31 +29,9 @@
 
 		<!-- second line -->
 		<section class="row-two">
-			<section>
-				<div>
-						<div class="title">
-							<div>
-								<h3>Sales by Countries</h3>
-								<p >Monthly Sales Overview</p>
-						</div>
-						</div>
-						<font-awesome-icon :icon="['fas', 'ellipsis-vertical']"  />
-				</div>
-				<div class="country">
-					<font-awesome-icon :icon="['fas', 'flag-usa']" class="i"/>
-					<div class="price">
-						<div>
-							<span>$8,567k</span>
-							<p>United States</p>
-						</div>
-					</div>
-					<div class="percent">
-						<font-awesome-icon :icon="['fas', 'caret-up']" />
-						<p>25.8%</p>
-						<span>+3.1k</span>
-					</div>
-				</div>
-			</section>
+			<span class="h-64 col-span-1 py-10 px-5 rounded-lg bg-white">
+				<Visits/>
+			</span>
 
 			<div class="h-64 col-span-1  rounded-lg bg-white">
 				<chartBarra/>
@@ -74,17 +52,6 @@
 				<!-- table -->
 				<div class="h-64 col-span-2 rounded-lg bg-slate-500">
 				<Table/>
-				</div>
-		</section>
-
-		<section class="row-tres">
-			<span class="h-64 col-span-1 py-10 px-5 rounded-lg bg-white">
-				<Visits/>
-			</span>
-
-				<!-- table -->
-				<div class="h-64 col-span-2 rounded-lg bg-base-100 ">
-				
 				</div>
 		</section>
 	</div>
