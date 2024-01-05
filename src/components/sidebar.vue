@@ -1,23 +1,49 @@
 <template>
 	<div id="sidebar">
 		<h1>
-			<img src="../assets/logo.png"  />
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmg6VbQr7k4bE8m1sGjODK19nEZn-UKVChBg&usqp=CAU" alt="logoe" />
 			<font-awesome-icon :icon="['fas', 'circle-dot']" class="i" />
 		</h1>
-		<nav class="dropdown">
+		<nav class="list">
 			<ul>
 				<li>
-					<font-awesome-icon :icon="['fas', 'table-cells-large']" />
-					Layout
+					<a href="#">
+						<font-awesome-icon :icon="['fas', 'table-columns']" />
+						Layout
+					</a>
+					<font-awesome-icon :icon="['fas', 'caret-right']"/>
 				</li>
-				<font-awesome-icon :icon="['fas', 'caret-right']"/>
-			</ul>
-			<ul class="menu teste" >
-				<li><a>Opção 1</a></li>
-				<li><a>Opção 2</a></li>
+				<li>
+					<a href="#">
+						<font-awesome-icon :icon="['far', 'envelope']" />
+						Email
+					</a>
+					<font-awesome-icon :icon="['fas', 'caret-right']"/>
+				</li>
+				<li>
+					<a href="#">
+						<font-awesome-icon :icon="['fas', 'cart-shopping']" />
+						E-comerce
+					</a>
+					<font-awesome-icon :icon="['fas', 'caret-right']"/>
+				</li>
+				<li>
+					<a href="#">
+						<font-awesome-icon :icon="['fas', 'chart-pie']" />
+						Gráficos
+					</a>
+					<font-awesome-icon :icon="['fas', 'caret-right']"/>
+				</li>
+				<li>
+					<a href="#">
+						<font-awesome-icon :icon="['fas', 'table-cells-large']"/>
+						Tabelas
+					</a>
+					<font-awesome-icon :icon="['fas', 'caret-right']"/>
+				</li>
+				
 			</ul>
 		</nav>
-		
 	</div>
 </template>
 
@@ -29,32 +55,30 @@ export default {
 <style lang="postcss" scoped>
 #sidebar{
 	@apply h-full flex flex-col gap-3 items-center p-5;
+	img{
+		@apply w-20 h-20;
+	}
 	.i {
 	@apply flex justify-end
 	}
-	.dropdown {
+	.list {
   @apply w-full ;
-
 }
-	.dropdown ul{
-	@apply relative flex justify-between items-center w-full text-gray-700 p-2 ;
+	.list ul{
+	@apply w-full flex flex-col items-center text-gray-700 p-2 ;
 }
-.dropdown li{
-	@apply relative flex flex-1 gap-2 items-center text-xl;
+.list li{
+	@apply w-full h-10 flex justify-between gap-2 items-center text-xl;
+	a {
+		@apply flex gap-5 items-center ;
+	}
 }
-
 }
-#sidebar > h1:first-of-type {
+ h1{
 	@apply w-full flex justify-between items-center p-1;
 }
-
-#sidebar > nav {
+ nav {
 	@apply flex justify-end items-center gap-5;
 }
-#sidebar a {
-	@apply text-sm;
-}
-.teste{
-	@apply shadow menu dropdown-content bg-base-100 rounded-box w-full z-50;
-}
+
 </style>
