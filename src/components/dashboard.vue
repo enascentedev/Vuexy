@@ -4,20 +4,8 @@
 		<!-- first line -->
 		<section class="row-one">
 			<section>
-				<div class="view">
-					<div>
-						<h3>Website Analytics</h3>
-						<p>Total 28.5%</p>
-						<h3>Traffic</h3>
-						<div class="percent ">
-							<span >28%</span>
-							<p>Sessions</p>
-							<span>3.1k</span>
-							<p>Page Views</p>
-						</div>
-					</div>
-						<img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/img/illustrations/card-website-analytics-1.png" alt="Descrição da Imagem"/>
-				</div>
+				<!-- gráfico bar -->
+				<chartBarra/>
 			</section>
 			<div class="col-two ">
 				<chartPie/>
@@ -61,6 +49,7 @@
 import chartPie from "@/components/graficos/chartPie.vue";
 import chartRadial from "@/components/graficos/chartRadial.vue";
 import chartBarra from "@/components/graficos/chartBarra.vue";
+import chartBar from "@/components/graficos/chartBar.vue";
 import chartMap from "@/components/graficos/chartMap.vue";
 import chartBrand from "@/components/graficos/chartBrand.vue";
 import Visits from "@/components/source/visits.vue";
@@ -72,6 +61,7 @@ export default {
 		chartPie,
 		chartRadial,
 		chartBarra,
+		chartBar,
 		chartMap,
 		chartBrand,
 		Table,
