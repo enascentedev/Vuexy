@@ -5,7 +5,7 @@
 		<section class="row-one">
 			<section>
 				<!-- gráfico bar -->
-				<chartBarra/>
+				<chartBar/>
 			</section>
 			<div class="col-two ">
 				<chartPie/>
@@ -123,7 +123,7 @@ export default {
 
 	}
 .row-one section{
-		@apply col-span-2 h-64 py-10 px-5 rounded-lg bg-blue-500;
+		@apply col-span-2 h-64 py-10 px-5 rounded-lg bg-white;
 		.view{
 			@apply flex text-amber-50;
 			.view div {

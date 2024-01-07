@@ -1,6 +1,6 @@
 <template>
   <div>
-    <apexchart :options="chartOptions" :series="chartSeries" type="bar" width="400" />
+    <apexchart type="area" width="460" height="200" :options="chartOptions" :series="chartSeries" />
   </div>
 </template>
 
@@ -12,76 +12,41 @@ export default {
   components: {
     apexchart: VueApexCharts,
   },
-  data() {
+	data() {
     return {
       chartOptions: {
-        series: [
-          {
-            name: 'coins',
-            data: [2, 4, 3, 4, 3, 5, 5, 6.5, 6, 5, 4, 5, 8, 7, 7, 8, 8, 10, 9, 9, 12, 12, 11, 12, 13, 14, 16, 14, 15, 17, 19, 21]
-          }
-        ],
         chart: {
-          type: 'bar',
-          height: 410,
-          animations: {
-            enabled: false
-          }
-        },
-        plotOptions: {
-          bar: {
-            horizontal: true,
-            barHeight: '100%',
+          type: 'area',
+          height: 350,
+					toolbar: {
+            show: false,
           },
         },
         dataLabels: {
           enabled: false,
         },
         stroke: {
-          colors: ["#fff"],
-          width: 0.2
+          curve: 'smooth',
         },
-        labels: Array.apply(null, { length: 39 }).map(function (el, index) {
-          return index + 1;
-        }),
-        yaxis: {
-          axisBorder: {
-            show: false
-          },
-          axisTicks: {
-            show: false
-          },
-          labels: {
-            show: false
-          },
-          title: {
-            text: 'Weight',
-          },
+        xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         },
-        grid: {
-          position: 'back'
-        },
-        title: {
-          text: 'Paths filled by clipped image',
-          align: 'right',
-          offsetY: 30
-        },
-        fill: {
-          type: 'image',
-          opacity: 0.87,
-          image: {
-            src: [
-              'https://static.todamateria.com.br/upload/pa/is/paisagem-natural-og.jpg',
-              'https://static.todamateria.com.br/upload/pa/is/paisagem-natural-og.jpg',
-              'https://static.todamateria.com.br/upload/pa/is/paisagem-natural-og.jpg',
-              // Adicione mais URLs conforme necessário
-            ],
-            width: 466,
-            height: 406
-          }
+        tooltip: {
+          x: {
+            format: 'MMM',
+          },
         },
       },
-      chartSeries: ['coins'],
+      chartSeries: [
+        {
+          name: 'Series 1',
+          data: [30, 40, 25, 50, 49, 21, 70, 51, 60, 75, 30, 40],
+        },
+        {
+          name: 'Series 2',
+          data: [23, 12, 54, 61, 32, 56, 81, 19, 45, 30, 60, 80],
+        },
+      ],
     };
   },
 };
