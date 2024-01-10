@@ -1,13 +1,12 @@
 <template>
-	<!-- componentizar os itens do dashboard -->
+
 	<div id="dashboard">
 		<!-- first line -->
 		<section class="row-one">
 			<section>
-				<!-- gráfico bar -->
 				<chartBar/>
 			</section>
-			<div class="col-two ">
+			<div class="col-two">
 				<chartPie/>
 			</div>
 			<div class="col-three">
@@ -17,28 +16,25 @@
 
 		<!-- second line -->
 		<section class="row-two">
-			<span class="h-64 col-span-1 py-10 px-5 rounded-lg bg-white">
+			<span class="col-one">
 				<Visits/>
 			</span>
 
-			<div class="h-64 col-span-1  rounded-lg bg-white">
+			<div class="col-one">
 				<chartBarra/>
 			</div>
 
-			<div class="h-64 col-span-1 rounded-lg bg-white">
+			<div class="col-one">
 				<chartMap/>
 			</div>
-
 		</section>
 
 <!-- third line -->
-		<section class="row-tres">
-			<span class="h-64 col-span-1 rounded-lg bg-white">
+		<section class="row-three">
+			<span class="col-one">
 				<chartBrand/>
 			</span>
-
-				<!-- table -->
-				<div class="h-64 col-span-2 rounded-lg bg-slate-500">
+				<div class="col-table">
 				<Table/>
 				</div>
 		</section>
@@ -73,112 +69,25 @@ export default {
 #dashboard {
   @apply w-full flex flex-col gap-5;
  .row-one{
-  @apply w-full grid grid-cols-4 gap-5;
-	.col-two,.col-three{
-	@apply h-64  p-5 rounded-lg bg-white;  
-}
+	@apply w-full grid grid-cols-4 gap-5;
+		section{
+		@apply col-span-2 h-64 py-10 px-5 rounded-lg bg-white;
+		}
+		.col-two,.col-three{
+		@apply h-64  p-5 rounded-lg bg-white;  
+	}
 }
 .row-two{
   @apply w-full grid grid-cols-3 gap-5;
 }
 }
-.row-two section{
-	@apply h-96 col-span-1 py-10 px-5 rounded-lg bg-white;
-	.country {
-		@apply flex items-center;
-		.i{
-			@apply p-3 rounded-full  bg-yellow-400
-		}
-		.price{
-			@apply flex flex-1 p-2;
-			div{
-				@apply flex flex-col;
-				span{
-					@apply font-semibold text-lg;
-				}
-				p{
-					@apply text-sm text-gray-600;
-				}
-			}
-		}
-		.percent{
-			@apply flex items-center gap-2 font-semibold ;
-			span{
-				@apply px-2 py-1 rounded-lg bg-blue-600;
-			}
-		}
-	}
-}
-.row-two section div:first-child{
-		@apply flex items-center;
-		.title{
-			@apply flex flex-1;
-			div{
-				@apply flex flex-col;
-				p{
-					@apply text-xs;
-				}
-			}
-		}
-
-	}
-.row-one section{
-		@apply col-span-2 h-64 py-10 px-5 rounded-lg bg-white;
-		.view{
-			@apply flex text-amber-50;
-			.view div {
-				@apply flex flex-col font-semibold;
-			}
-		.percent{
-			@apply flex items-center gap-1 mt-5;
-			.percent span{
-				@apply  px-2 py-1 rounded-lg bg-blue-900;
-			}
-			 h3{
-					@apply mt-3;
-
-				}
-		}
-		}
-		img{
-			@apply w-20 h-40 flex flex-1 mr-10; 
-		}
-	}
-	.title-table{
-		@apply flex justify-between items-center p-5;
-		h2{
-			@apply text-xl font-semibold
-		}
-		input{
-			@apply h-10 px-5 border-2 border-gray-300 bg-white  rounded-lg text-sm 
-		}
-	}
-	#content-table{
-		@apply overflow-x-auto bg-white rounded-lg shadow m-5;
-		table{
-			thead{
-				@apply text-xs text-gray-700 uppercase;
-				th{
-					@apply px-6 py-3;
-					div{
-						@apply flex items-center;
-					}
-				}
-			}
-			tbody{
-				tr{
-					@apply border-b bg-gray-50;
-					td{
-						@apply px-6 py-4;
-						div{
-							@apply flex items-center
-						}
-					}
-				}
-			}
-		}
-	}
-.row-tres{
+.row-three{
   @apply w-full grid grid-cols-3 gap-5 mb-5;
 }
+.col-one {
+		@apply h-64 col-span-1 rounded-lg bg-white;
+	}
+	.col-table {
+		@apply h-64 col-span-2 rounded-lg bg-slate-500;
+	}
 </style>

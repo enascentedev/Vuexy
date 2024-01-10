@@ -18,13 +18,13 @@ export default {
 <style lang="postcss" scoped>
 #header {
   @apply flex justify-between items-center py-8 text-lg rounded-lg bg-white;
+	.i {
+	@apply pl-5
+	}
+
+	div {
+		@apply flex items-center gap-5 pr-5;
+	}
 }
 
-.i {
- @apply pl-5
-}
-
-#header > div {
-  @apply flex items-center gap-5 pr-5;
-}
 </style>

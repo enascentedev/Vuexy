@@ -37,7 +37,7 @@ export default {
 <style lang="postcss" scoped>
 #visits {
 	 section{
-		@apply h-96 col-span-1 rounded-lg ;
+		@apply py-10 px-5 ;
 		.title{
 			@apply flex justify-between items-center;
 			div{
