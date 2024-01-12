@@ -1,6 +1,6 @@
-# hotpage
+# Gráficos em VueApexCharts
+Fiz esse projeto para aprimorar meu conhecimento na biblioteca de gráficos apexchart, praticar minha semântica html , vue, tailwind e poder fazer alguns testes
 
-This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
